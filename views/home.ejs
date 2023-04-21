@@ -1,0 +1,17 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Open+Sans&family=Oswald&family=Space+Grotesk&display=swap" rel="stylesheet">
+<%- include("header") -%>
+      <% dataArray.forEach(element=>{ %>
+      <div class="taskContainer">
+        <div class="taskBox">
+          <p><%= element.body %></p>
+          <form action="/edit" method="post" style="margin: 10px 0;">
+            <button name="edit" value="<%= element._id %>" class="btnclick" onclick="this.form.submit()"><img src="edit.png" style="height:10px;width:10px"></button>
+          </form>
+          <form action="/delete" method="post" style="margin: 10px 0;">
+            <button name="delete" value="<%= element._id %>" class="btnclick" onclick="this.form.submit()"><img src="delete.png" style="height:10px;width:10px"></button>
+          </form>
+      </div>
+      </div>
+    <% }) %>
