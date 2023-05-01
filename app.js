@@ -67,6 +67,9 @@ app.post("/edit",(req,res)=>{
     .then((foundItems)=>{
         res.render("task",{id1:foundItems._id,name:foundItems.body})
     })
+    .catch((err)=>{{
+        console.log(err)
+    }})
 })
 
 app.post("/update",async (req,res)=>{
