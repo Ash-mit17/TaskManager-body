@@ -27,6 +27,9 @@ app.get("/",function(req,res){
                     .then((foundItems)=>{
                         // console.log(foundItems)
                         res.render("home",{dataArray:foundItems})})
+                    .catch((err)=>{{
+                        console.log(err)
+                    }})
 })
 
 app.post("/",async function(req,res){
@@ -39,6 +42,9 @@ app.post("/",async function(req,res){
         // console.log(foundItems)
         return foundItems;
     })
+    .catch((err)=>{{
+        console.log(err)
+    }})
     var flag=0;
     arr.forEach(element => {
         if(element.body===b)
