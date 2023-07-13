@@ -24,6 +24,7 @@ app.set("view engine","ejs")
 
 app.get("/",function(req,res){
     Items.find({},{body:1,_id:1})
+                    .sort({body:1})
                     .then((foundItems)=>{
                         // console.log(foundItems)
                         res.render("home",{dataArray:foundItems})})
