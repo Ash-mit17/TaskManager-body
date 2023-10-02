@@ -1,17 +1,26 @@
+<!--This is a comment -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Open+Sans&family=Oswald&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+<!-- Include the header section -->
 <%- include("header") -%>
-      <% dataArray.forEach(element=>{ %>
-      <div class="taskContainer">
-        <div class="taskBox">
-          <p><%= element.body %></p>
-          <form action="/edit" method="post" style="margin: 10px 0;">
+
+<!-- Loop through the dataArray to display tasks -->
+<% dataArray.forEach(element=>{ %>
+<div class="taskContainer">
+    <div class="taskBox">
+        <!-- Display the task body -->
+        <p><%= element.body %></p>
+        <!-- Form for editing a task -->
+        <form action="/edit" method="post" style="margin: 10px 0;">
             <button name="edit" value="<%= element._id %>" class="btnclick" onclick="this.form.submit()"><img src="edit.png" style="height:10px;width:10px"></button>
-          </form>
-          <form action="/delete" method="post" style="margin: 10px 0;">
+        </form>
+        <!-- Form for deleting a task -->
+        <form action="/delete" method="post" style="margin: 10px 0;">
             <button name="delete" value="<%= element._id %>" class="btnclick" onclick="this.form.submit()"><img src="delete.png" style="height:10px;width:10px"></button>
-          </form>
-      </div>
-      </div>
-    <% }) %>
+        </form>
+    </div>
+</div>
+<% }) %>

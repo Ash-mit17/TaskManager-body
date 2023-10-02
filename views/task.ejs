@@ -1,12 +1,21 @@
+<!--This is a comment -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Open+Sans&family=Oswald&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+<!-- Link to the CSS stylesheet -->
 <link rel="stylesheet" href="css/styles.css">
+
+<!-- Form for updating a task -->
 <form action="/update" method="post">
     <div class="itemcontainer">
         <div class="itembox">
             <p>Edit the task</p>
+            <!-- Input field for editing the task -->
             <input type="text" name="newname" value="<%= name %>" placeholder="<%= name %>">
+            <!-- Button to submit the updated task -->
             <button name="btnid" value="<%= id1 %>" onclick="this.form.submit()">Update</button>
+        </div>
     </div>
 </form>

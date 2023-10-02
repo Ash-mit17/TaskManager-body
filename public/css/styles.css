@@ -1,3 +1,4 @@
+/* Set styles for the entire page */
 html,body{
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@ html,body{
     font-family: 'Space Grotesk', sans-serif;
 }
 
+/* Styles for the navigation bar */
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -20,12 +22,13 @@ html,body{
     letter-spacing: 5px;
 }
 
+/* Styles for the container holding the to-do list */
 .container{
     display: flex;
     justify-content: center;
 }
 
-
+/* Styles for the individual box/container */
 .box{
     display: inline;
     margin:50px;
@@ -37,23 +40,26 @@ html,body{
     border-radius: 10px;
 }
 
+/* Styles for buttons */
 .btn{
     text-align: center;
     line-height: 15px;
     margin: 5px 0;
 }
 
-
+/* Styles for the form box */
 .formbox{
     display: flex;
     justify-content: center;
     padding: 20px 0;
 }
 
+/* Styles for the border */
 .border{
     box-shadow: black;
 }
 
+/* Styles for the new entry input field */
 #newentry{
     width: 25vw;
     height: 4vh;
@@ -62,12 +68,14 @@ html,body{
     padding-top: 5px;
 }
 
+/* Styles for buttons within a box */
 .btnbox{
     display: inline;
     padding-left: 10px;
     border-radius: 10px;
 }
 
+/* Styles for buttons */
 .btn{
     width: 5vw;
     height: 4vh;
@@ -75,19 +83,21 @@ html,body{
     border-radius: 20px;
 }
 
+/* Hover styles for buttons */
 .btn:hover{
     background-color: #ffbd03;
     color: #eee;
     font-weight: bold;
 }
 
-
+/* Styles for the task container */
 .taskContainer{
     margin: 15px 0;
     display: flex;
     justify-content:center;
 }
 
+/* Styles for individual task boxes */
 .taskBox{
     display: inline-flex;
     justify-content: center;
@@ -101,15 +111,18 @@ html,body{
     border-radius: 6px;
 }
 
+/* Styles for text within the task boxes */
 .taskBox p{
     margin: 3px 10px;
     width: 320px;
 }
 
+/* Styles for the click button within a task box */
 .btnclick{
     margin: 0 5px;
 }
 
+/* Styles for the item container */
 .itemcontainer{
     display:flex;
     justify-content: center;
@@ -117,6 +130,7 @@ html,body{
     margin: 15%  0 0 0;
 }
 
+/* Styles for individual item boxes */
 .itembox{
     background-color: azure;
     display: inline-block;
@@ -128,12 +142,13 @@ html,body{
     width: 350px;
 }
 
+/* Styles for text within the item boxes */
 .itembox p{
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-
+/* Responsive styles for screens smaller than 600px */
 @media only screen and (max-width:600px){
     html,body{
         font-size: small;
